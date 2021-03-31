@@ -1,0 +1,100 @@
+#page-landing {
+  background: linear-gradient(329.54deg, #29b6d1 0%, #00c7c7 100%);
+
+  text-align: center;
+  min-height: 100vh;
+
+  display: flex;
+}
+
+#container {
+  margin: auto;
+
+  width: min(90%, 112rem);
+}
+
+.find p {
+  height: 16vh;
+}
+
+#logo {
+  animation-delay: 50ms;
+}
+
+main h1 {
+  animation-delay: 100ms;
+  font-size: clamp(2rem, 5vw, 4rem);
+  text-align: initial;
+}
+
+.find p {
+  animation-delay: 150ms;
+}
+
+.find a {
+  width: 8rem;
+  height: 8rem;
+  background: #ffd666;
+
+  border: none;
+  border-radius: 3rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: auto;
+
+  transition: background 200ms;
+  animation-delay: 200ms;
+}
+
+.find a:hover {
+  background: #96feff;
+}
+
+/* desktop version */
+@media (min-width: 760px) {
+  #container {
+    padding: 3rem 1rem;
+    /* shorthand background: image repeat position / size */
+    background: url('../images/img-lp.png') no-repeat 80% /
+      clamp(24rem, 40vw, 40rem);
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .find p {
+    height: initial;
+    text-align: initial;
+  }
+
+  main h1 {
+    font-weight: bold;
+    line-height: 0.88;
+
+    margin: clamp(8%, 6vh, 10%) 0 4rem;
+
+    width: min(300px, 80%);
+  }
+
+  .find {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .find p {
+    font-size: 2rem;
+    line-height: 1;
+    width: clamp(16rem, 18vw, 20rem);
+  }
+
+  .find a {
+    margin: initial;
+  }
+}

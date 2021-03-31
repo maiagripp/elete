@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Localize um lar temporário - Eletê</title>
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+
+  <link rel="icon" href="/images/logo-icon.png" />
+  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="/css/page-lares.css" />
+  <link rel="stylesheet" href="/css/animation.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <div id="page-lares">
+    <aside class="animate-right">
+      <header>
+        <img src="/images/logo-icon.png" alt="Eletê" />
+        <h2>Ache um lar temporário no mapa</h2>
+
+        <p>Ajude um peludo a achar o seu lar definitivo</p>
+      </header>
+    </aside>
+    <div id="mapid" class="animate-appear"></div>
+
+    <div class="lares">
+      {{#each lares}}
+      <span hidden data-id="{{this.id}}" data-name="{{this.name}}" data-lat="{{this.lat}}"
+        data-lng="{{this.lng}}"></span>
+      {{/each}}
+    </div>
+
+    <a href="/create-lar" class="create-lar" title="Cadastre um lar temporário">
+      <img src="./images/plus.svg" alt="Criar lar temporário" />
+    </a>
+  </div>
+
+  <script src="/scripts/page-lares.js"></script>
+</body>
+
+</html>
